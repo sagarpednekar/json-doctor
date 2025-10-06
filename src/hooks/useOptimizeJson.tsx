@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as Sentry from "@sentry/nextjs"
+import { isValidJSON } from '@/lib/utils';
+import { toast } from 'sonner';
 
 export type RepairResponse = {
     repaired: any;
@@ -22,9 +24,22 @@ export const repairJson = async (json: string): Promise<RepairResponse> => {
 };
 export default function useOptimizeJson() {
     const [inputJson, setInputJson] = useState<string>('');
+    const [isValidJson, setIsValidJson] = useState(false)
+
+    useEffect(() => {
+        if (inputJson.trim() !== "") {
+            const { valid } = isValidJSON(inputJson)
+            setIsValidJson(valid)
+            if(valid) toast("Your JSON is already Parsed!")
+        }
+        return () => {
+            setIsValidJson(false)
+        }
+    }, [inputJson])
 
     return {
         inputJson,
         setInputJson,
+        isValidJson
     };
 }
