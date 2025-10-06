@@ -7,7 +7,7 @@ import { useMutation } from '@tanstack/react-query';
 import { InputBox, PreviewTab } from '@/components';
 
 export default function JsonEditor() {
-  const { inputJson, setInputJson } = useOptimizeJson();
+  const { inputJson, setInputJson, isValidJson } = useOptimizeJson();
 
   const { mutate, isPending, isError, error, data, reset } = useMutation<
     RepairResponse | null,
@@ -26,6 +26,7 @@ export default function JsonEditor() {
         inputJson={inputJson}
         setInputJson={setInputJson}
         reset={reset}
+        isValidJson={isValidJson}
       />
       {/* Json Preview */}
       <PreviewTab
@@ -33,6 +34,8 @@ export default function JsonEditor() {
         isError={isError}
         error={error}
         data={data}
+        isValidJson={isValidJson}
+        inputJson={inputJson}
       />
     </div>
   );
