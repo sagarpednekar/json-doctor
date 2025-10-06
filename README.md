@@ -1,10 +1,3 @@
-Perfect timing 💪 — having a **clear, developer-friendly README** makes your **JSON Doctor** project instantly more professional and open-source–ready.
-
-Below is a polished, production-quality README.md template you can drop directly into your repo.
-It’s tailored for your stack: **Next.js + Gemini AI + Tailwind + JSON repair & schema inference app**.
-
----
-
 # 🧠 JSON Doctor
 
 ### *Fix. Explain. Explore JSON like never before.*
@@ -14,6 +7,14 @@ It’s tailored for your stack: **Next.js + Gemini AI + Tailwind + JSON repair &
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
+
+Perfect timing 💪 — having a **clear, developer-friendly README** makes your **JSON Doctor** project instantly more professional and open-source–ready.
+
+Below is a polished, production-quality README.md template you can drop directly into your repo.
+It’s tailored for your stack: **Next.js + Gemini AI + Tailwind + JSON repair & schema inference app**.
+
+---
+
 
 ## 🩺 Overview
 
